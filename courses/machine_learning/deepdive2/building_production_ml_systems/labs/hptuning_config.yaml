@@ -1,0 +1,25 @@
+# this is improper 
+trainingInput:
+  scaleTier: BASIC
+  hyperparameters:
+    goal: MINIMIZE
+    maxTrials: 10
+    maxParallelTrials: 5
+    hyperparameterMetricTag: rmse
+    enableTrialEarlyStopping: True
+    params:
+    - parameterName: lr
+      type: DOUBLE
+      minValue: 0.001
+      maxValue: 0.01
+      scaleType: UNIT_LINEAR_SCALE
+    - parameterName: nbuckets
+      type: INTEGER
+      minValue: 10
+      maxValue: 25
+      scaleType: UNIT_LINEAR_SCALE
+    - parameterName: batch_size
+      type: INTEGER
+      minValue: 10
+      maxValue: 50
+      scaleType: UNIT_LINEAR_SCALE    
