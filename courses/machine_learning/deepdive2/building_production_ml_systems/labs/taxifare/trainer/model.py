@@ -233,6 +233,7 @@ def train_and_evaluate(hparams):
     tf.saved_model.save(dnn_model, model_export_path)
     
     # TODO 1
+    print(f"val_rmse: {history.history['val_rmse']}")
     hp_metric = history.history['val_rmse'][num_evals-1]
     
     # TODO 1
